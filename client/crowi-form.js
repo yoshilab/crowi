@@ -8,7 +8,7 @@ $(function() {
 
   // show/hide
   function FetchPagesUpdatePostAndInsert(path) {
-    $.get('/_api/pages.updatePost', { path: path }, function(res) {
+    $.get('/_api/pages.updatePost', { path }, function(res) {
       if (res.ok) {
         var $slackChannels = $('#page-form-slack-channel')
         $slackChannels.val(res.updatePost.join(','))
@@ -397,15 +397,15 @@ $(function() {
     var InlineAttachment = inlineAttachment
     var inlineattach = new InlineAttachment(attachmentOption, editor)
     $form.bind({
-      'paste.inlineattach': function(e) {
+      'paste.inlineattach'(e) {
         inlineattach.onPaste(e.originalEvent)
       },
-      'drop.inlineattach': function(e) {
+      'drop.inlineattach'(e) {
         e.stopPropagation()
         e.preventDefault()
         inlineattach.onDrop(e.originalEvent)
       },
-      'dragenter.inlineattach dragover.inlineattach': function(e) {
+      'dragenter.inlineattach dragover.inlineattach'(e) {
         e.stopPropagation()
         e.preventDefault()
       },
@@ -415,13 +415,13 @@ $(function() {
     var $this = $form
 
     return {
-      getValue: function() {
+      getValue() {
         return $this.val()
       },
-      insertValue: function(val) {
+      insertValue(val) {
         inlineAttachment.util.insertTextAtCursor($this[0], val)
       },
-      setValue: function(val) {
+      setValue(val) {
         $this.val(val)
       },
     }

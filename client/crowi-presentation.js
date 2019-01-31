@@ -20,40 +20,40 @@ Reveal.initialize({
   dependencies: [
     {
       src: '/js/reveal/lib/js/classList.js',
-      condition: function() {
+      condition() {
         return !document.body.classList
       },
     },
     {
       src: '/js/reveal/plugin/markdown/marked.js',
-      condition: function() {
+      condition() {
         return !!document.querySelector('[data-markdown]')
       },
     },
     {
       src: '/js/reveal/plugin/markdown/markdown.js',
-      condition: function() {
+      condition() {
         return !!document.querySelector('[data-markdown]')
       },
     },
     {
       src: '/js/reveal/plugin/highlight/highlight.js',
       async: true,
-      callback: function() {
+      callback() {
         hljs.initHighlightingOnLoad()
       },
     },
     {
       src: '/js/reveal/plugin/zoom-js/zoom.js',
       async: true,
-      condition: function() {
+      condition() {
         return !!document.body.classList
       },
     },
     {
       src: '/js/reveal/plugin/notes/notes.js',
       async: true,
-      condition: function() {
+      condition() {
         return !!document.body.classList
       },
     },

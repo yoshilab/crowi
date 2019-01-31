@@ -418,7 +418,7 @@ $(function() {
     $('#input-group-username').removeClass('has-error')
     $('#help-block-username').html('')
 
-    $.getJSON('/_api/check_username', { username: username }, function(json) {
+    $.getJSON('/_api/check_username', { username }, function(json) {
       if (!json.valid) {
         $('#help-block-username').html('<i class="fa fa-exclamation-triangle"></i> This User ID is not available.<br>')
         $('#input-group-username').addClass('has-error')
@@ -432,7 +432,7 @@ $(function() {
     $('#input-group-username').removeClass('has-error')
     $('#help-block-username').html('')
 
-    $.getJSON('/_api/check_username', { username: username }, function(json) {
+    $.getJSON('/_api/check_username', { username }, function(json) {
       if (!json.valid) {
         $('#help-block-username').html('<i class="fa fa-warning"></i> This User ID is not available.<br>')
         $('#input-group-username').addClass('has-error')
@@ -557,7 +557,7 @@ $(function() {
       contentType: false,
       data: fd,
       dataType: 'json',
-      success: function(data) {
+      success(data) {
         if (data.status) {
           $('#settingUserPicture').attr('src', data.url + '?time=' + new Date())
           $('#pictureUploadFormMessage')
@@ -605,7 +605,7 @@ $(function() {
       $('.header-wrap').css({ height: headerHeight + 16 + 'px' })
       $header.affix({
         offset: {
-          top: function() {
+          top() {
             return headerHeight + 86 // (54 header + 16 header padding-top + 16 content padding-top)
           },
         },

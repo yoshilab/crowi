@@ -67,7 +67,7 @@ $(function() {
         if (status == 'success') {
           setTimeout(function() {
             $message.fadeOut({
-              complete: function() {
+              complete() {
                 $message.remove()
               },
             })

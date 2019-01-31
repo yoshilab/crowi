@@ -45,7 +45,7 @@ export default class PageHistory extends React.Component {
 
         this.setState({
           revisions: rev,
-          diffOpened: diffOpened,
+          diffOpened,
         })
 
         // load 0, and last default

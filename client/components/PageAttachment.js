@@ -36,8 +36,8 @@ export default class PageAttachment extends React.Component {
       }
 
       this.setState({
-        attachments: attachments,
-        inUse: inUse,
+        attachments,
+        inUse,
       })
     })
   }

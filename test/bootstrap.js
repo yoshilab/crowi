@@ -7,7 +7,7 @@ var MODEL_DIR = path.join(__dirname, './../lib/models')
 var testDBUtil
 
 testDBUtil = {
-  generateFixture: function(conn, model, fixture) {
+  generateFixture(conn, model, fixture) {
     if (conn.readyState == 0) {
       return Promise.reject(new Error())
     }

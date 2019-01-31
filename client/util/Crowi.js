@@ -147,7 +147,7 @@ export default class Crowi {
   }
 
   async apiGet(path, params) {
-    return this.apiRequest('get', path, { params: params })
+    return this.apiRequest('get', path, { params })
   }
 
   async apiPost(path, params) {

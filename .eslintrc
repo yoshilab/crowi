@@ -22,6 +22,7 @@
     "no-global-assign": "off",
     "no-inner-declarations": "off",
     "no-redeclare": "off",
+    "object-shorthand": ["error", "always"],
     "prettier/prettier": "error",
     "react/prefer-stateless-function": "off",
     "standard/no-callback-literal": "off"

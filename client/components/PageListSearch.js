@@ -110,7 +110,7 @@ export default class PageListSearch extends React.Component {
     })
 
     this.props.crowi
-      .apiGet('/search', { q: keyword, tree: tree })
+      .apiGet('/search', { q: keyword, tree })
       .then(res => {
         this.setState({
           searchedKeyword: keyword,

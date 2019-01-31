@@ -61,6 +61,6 @@ fs.readdirSync(MODEL_DIR).forEach(function(file) {
 crowi.models = models
 
 module.exports = {
-  models: models,
-  mongoose: mongoose,
+  models,
+  mongoose,
 }

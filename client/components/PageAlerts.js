@@ -25,7 +25,7 @@ export default class PageAlerts extends React.Component {
         this.setState({
           alertAppeared: true,
           message: 'edit',
-          data: data,
+          data,
         })
       }
     })
