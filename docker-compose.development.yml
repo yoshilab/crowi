@@ -53,14 +53,14 @@ services:
     ports:
       - 9200:9200
 
-  redis:
-    image: redis:4.0.8
-    restart: always
-    ports:
-      - 6379:6379
+  #redis:
+  #  image: redis:4.0.8
+  #  restart: always
+  #  ports:
+  #    - 6379:6379
 
-  plantuml:
-    image: plantuml/plantuml-server:latest
-    restart: always
-    ports:
-      - 8080:8080
+  #plantuml:
+  #  image: plantuml/plantuml-server:latest
+  #  restart: always
+  #  ports:
+  #    - 8080:8080
