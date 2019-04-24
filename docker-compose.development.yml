@@ -8,6 +8,7 @@ services:
     tty: true
     environment:
       DEBUG: "crowi:*"
+      PASSWORD_SEED: "password"
       MONGO_URI: mongodb://mongodb:27017/crowi
       REDIS_URL: redis://redis:6379/crowi
       ELASTICSEARCH_URI: elasticsearch:9200/
