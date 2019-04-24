@@ -7,10 +7,14 @@ services:
         NODE_ENV: "development"
     tty: true
     environment:
-      DEBUG: "crowi:*"
-      PASSWORD_SEED: "password"
-      MONGO_URI: mongodb://mongodb:27017/crowi
-      FILEUPLOAD: local
+      - DEBUG="crowi:*"
+      - PASSWORD_SEED="password"
+      - MONGO_URI="mongodb://mongodb:27017/crowi"
+      - FILEUPLOAD="local"
+      - HTTP_PROXY="http://proxy.noc.kochi-tech.ac.jp:3128"
+      - HTTPS_PROXY="http://proxy.noc.kochi-tech.ac.jp:3128"
+      - http_proxy="http://proxy.noc.kochi-tech.ac.jp:3128"
+      - http_proxy="http://proxy.noc.kochi-tech.ac.jp:3128"
     volumes:
       - ./:/crowi
       - /crowi/node_modules
