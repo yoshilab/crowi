@@ -21,8 +21,8 @@ services:
     links:
       - mongodb
       - elasticsearch
-      - redis
-      - plantuml
+    #  - redis
+    #  - plantuml
     command: bash -c "npm install && npm run dev"
 
   mongodb:
