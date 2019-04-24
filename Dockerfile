@@ -11,8 +11,4 @@ ENV NODE_ENV ${NODE_ENV}
 
 WORKDIR /crowi
 
-ADD . /crowi
-RUN npm install --update npm@5 -g
-RUN npm install --unsafe-perm
-
-CMD ["npm", "start"]
+RUN npm install --update npm -g

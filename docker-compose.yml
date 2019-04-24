@@ -1,15 +1,12 @@
 version: '3'
 services:
   crowi:
-    build:
-      context: .
-      args:
-        NODE_ENV: "development"
+    image: crowi
     tty: true
     environment:
       - DEBUG="crowi:*"
       - PASSWORD_SEED="password"
-      - MONGO_URI="mongodb://mongodb:27017/crowi"
+      - MONGO_URI="mongodb://172.21.39.74:27017/crowi"
       - FILEUPLOAD="local"
       - HTTP_PROXY="http://proxy.noc.kochi-tech.ac.jp:3128"
       - HTTPS_PROXY="http://proxy.noc.kochi-tech.ac.jp:3128"
