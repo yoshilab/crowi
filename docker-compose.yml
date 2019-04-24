@@ -1,7 +1,7 @@
 version: '3'
 services:
   crowi:
-    image: crowi
+    build: .
     tty: true
     environment:
       - DEBUG="crowi:*"
