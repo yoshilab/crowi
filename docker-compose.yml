@@ -20,8 +20,8 @@ services:
       - /crowi/node_modules
     ports:
       - 3000:3000
-      links:
-        - mongodb
+    links:
+      - mongodb
     command: bash -c "npm install && npm start"
 
   mongodb:
