@@ -15,4 +15,4 @@ ADD . /crowi
 RUN npm install --update npm@5 -g
 RUN npm install --unsafe-perm
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
