@@ -19,7 +19,7 @@ services:
       - 3000:3000
     links:
       - mongodb
-    command: bash -c "npm install --unsafe-perm && PASSWORD_SEED=$PASSWORD_SEED MONGO_URI=$MONGO_URI npm start"
+    command: bash -c "npm install --unsafe-perm && PASSWORD_SEED=password MONGO_URI=mongodb://mongodb:27017/crowi npm start"
 
   mongodb:
     image: mongo:3.6.3
